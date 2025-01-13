@@ -1,18 +1,18 @@
 "use client"; // Esto asegura que el componente es renderizado en el cliente
 
 import { useState } from "react";
-import Logo from "../atoms/Logo"; 
+import Logo from "../atoms/Logo";
 import NavbarLinks from "../molecules/NavbarLinks";
 import NavbarButton from "../molecules/NavbarButton";
-import { FaBars } from "react-icons/fa"; 
+import { FaBars } from "react-icons/fa";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="flex justify-between items-center h-20 p-6 bg-white shadow-md">
+    <nav className="sticky top-0 flex justify-between items-center px-40 h-20 bg-white shadow-md z-50">
       {/* Logo */}
-      <div className="flex items-center ml-10 h-10 w-[55px]">
+      <div className="flex items-center h-10 w-[55px]">
         <Logo />
       </div>
       {/* Links and Button */}

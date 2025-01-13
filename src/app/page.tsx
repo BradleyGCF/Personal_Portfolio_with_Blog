@@ -1,12 +1,12 @@
 import React from "react";
 import Navbar from "../components/organisms/Navbar";
-
+import HeroSection from "../components/organisms/HeroSection";
 const Page = () => {
   return (
     <div>
       <Navbar />
       <main className="p-6">
-        <h1 className="text-3xl">Welcome to my website!</h1>
+        <HeroSection />
       </main>
     </div>
   );
