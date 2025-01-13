@@ -1,8 +1,8 @@
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
 
 const Logo = () => {
-  return <Image src="/path/to/logo.png" alt="Logo" width={500} height={500} />;
+  return <Image src="/logo.jpg" alt="Logo" width={300} height={300} />;
 };
 
 export default Logo;

@@ -17,7 +17,7 @@ const NavbarButton = ({ label }: { label: string }) => {
         </>
       }
       onClick={handleClick}
-      className="bg-black text-white flex items-center px-4 py-2 rounded-lg"
+      className="bg-black rounded-md text-white flex items-center px-8 py-3"
     />
   );
 };

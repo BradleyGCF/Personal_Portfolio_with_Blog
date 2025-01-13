@@ -3,7 +3,7 @@ import type React from "react";
 export interface LinkProps {
   href: string;
   label: string;
-  className?: string; // Añadir esta línea
+  className?: string; 
 }
 
 const Link: React.FC<LinkProps> = ({ href, label, className }) => {
