@@ -1,15 +1,27 @@
-import React from "react";
-import Navbar from "../components/organisms/Navbar";
-import HeroSection from "../components/organisms/HeroSection";
-const Page = () => {
-  return (
-    <div>
-      <Navbar />
-      <main className="p-6">
-        <HeroSection />
-      </main>
-    </div>
-  );
-};
+import Navbar from "@/components/navbar"
+import Hero from "@/components/hero"
+import FloatingBackground from "@/components/floating-background"
+import Footer from "@/components/footer"
+import About from "@/components/about"
+// import About from "@/components/about"
+// import Projects from "@/components/projects"
+// import Skills from "@/components/skills"
+// import Contact from "@/components/contact"
+// import Footer from "@/components/footer"
 
-export default Page;
+export default function Home() {
+  return (
+    <main className="min-h-screen bg-background">
+      <FloatingBackground />
+      <Navbar />
+      <Hero />
+      <About />
+      {/* 
+      <Projects />
+      <Skills />
+      <Contact />*/}
+      <Footer /> 
+    </main>
+  )
+}
+
