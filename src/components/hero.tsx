@@ -37,9 +37,9 @@ export default function Hero() {
     >
       {/* Background animated gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-background to-background/50 z-0">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-[#0F1829]/30 dark:bg-[#fefeff]/30 rounded-full filter blur-3xl animate-blob"></div>
-
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-[#0F1829]/30 dark:bg-[#fefeff]/30 rounded-full filter blur-3xl animate-blob "></div>
+        <div className="absolute top-20 left-10 w-72 h-72 bg-[#0F1829]/30 dark:bg-[#fefeff]/30 rounded-full filter blur-3xl animate-blob" />
+        <div className="absolute top-0 right-0 mt-5 mr-5 w-72 h-72 bg-[#0F1829]/30 dark:bg-[#fefeff]/30 rounded-full filter blur-3xl animate-blob" />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-[#0F1829]/30 dark:bg-[#fefeff]/30 rounded-full filter blur-3xl animate-blob" />
       </div>
 
       <div className="container mx-auto px-4 z-10">
@@ -105,30 +105,28 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.1, duration: 0.5 }}
             >
-              <a
-                href="#contact"
+              <button
+                type="button"
                 className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-md font-medium transition-all duration-300 transform hover:scale-105"
-                onClick={(e) => {
-                  e.preventDefault();
+                onClick={() => {
                   document
                     .querySelector("#contact")
                     ?.scrollIntoView({ behavior: "smooth" });
                 }}
               >
                 Get in Touch
-              </a>
-              <a
-                href="#projects"
+              </button>
+              <button
+                type="button"
                 className="bg-background border border-primary text-primary hover:bg-primary/10 px-6 py-3 rounded-md font-medium transition-all duration-300 transform hover:scale-105"
-                onClick={(e) => {
-                  e.preventDefault();
+                onClick={() => {
                   document
                     .querySelector("#projects")
                     ?.scrollIntoView({ behavior: "smooth" });
                 }}
               >
                 View Projects
-              </a>
+              </button>
             </motion.div>
 
             <motion.div

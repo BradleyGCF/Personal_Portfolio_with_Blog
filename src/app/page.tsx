@@ -4,11 +4,8 @@ import FloatingBackground from "@/components/floating-background";
 import Footer from "@/components/footer";
 import About from "@/components/about";
 import Projects from "@/components/projects";
-// import About from "@/components/about"
-// import Projects from "@/components/projects"
-// import Skills from "@/components/skills"
-// import Contact from "@/components/contact"
-// import Footer from "@/components/footer"
+import TestimonialsSection from "@/components/testimonials-section";
+import ContactSection from "@/components/contact-section";
 
 export default function Home() {
   return (
@@ -18,9 +15,8 @@ export default function Home() {
       <Hero />
       <About />
       <Projects />
-      {/* 
-      <Skills />
-      <Contact />*/}
+      <TestimonialsSection />
+      <ContactSection />
       <Footer />
     </main>
   );
