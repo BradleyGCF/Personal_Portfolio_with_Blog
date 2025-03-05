@@ -1,8 +1,9 @@
-import Navbar from "@/components/navbar"
-import Hero from "@/components/hero"
-import FloatingBackground from "@/components/floating-background"
-import Footer from "@/components/footer"
-import About from "@/components/about"
+import Navbar from "@/components/navbar";
+import Hero from "@/components/hero";
+import FloatingBackground from "@/components/floating-background";
+import Footer from "@/components/footer";
+import About from "@/components/about";
+import Projects from "@/components/projects";
 // import About from "@/components/about"
 // import Projects from "@/components/projects"
 // import Skills from "@/components/skills"
@@ -16,12 +17,11 @@ export default function Home() {
       <Navbar />
       <Hero />
       <About />
-      {/* 
       <Projects />
+      {/* 
       <Skills />
       <Contact />*/}
-      <Footer /> 
+      <Footer />
     </main>
-  )
+  );
 }
-
