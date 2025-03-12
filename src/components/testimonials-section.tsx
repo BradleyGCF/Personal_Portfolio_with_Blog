@@ -80,14 +80,14 @@ export default function TestimonialsSection() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Testimonials</h2>
-          <div className="w-20 h-1 bg-red-600 mx-auto mb-8" />
+          <div className="w-20 h-1 bg-primary dark:bg-white mx-auto mb-8" />
           <p className="max-w-3xl mx-auto text-lg text-foreground/70">
             What clients and colleagues say about working with me.
           </p>
         </motion.div>
 
         <div className="relative max-w-4xl mx-auto">
-          <div className="absolute -top-10 left-0 text-red-600/20 dark:text-red-600/10">
+          <div className="absolute -top-10 left-0 text-primary/50 dark:text-primary/10">
             <Quote className="h-24 w-24" />
           </div>
 
@@ -105,7 +105,7 @@ export default function TestimonialsSection() {
               </p>
 
               <div className="flex items-center">
-                <div className="mr-4 rounded-full overflow-hidden h-16 w-16 border-2 border-red-600">
+                <div className="mr-4 rounded-full overflow-hidden h-16 w-16 border-2 border-primary dark:border-white">
                   <Image
                     src={testimonials[currentIndex].image || "/placeholder.svg"}
                     alt={testimonials[currentIndex].name}
@@ -134,8 +134,8 @@ export default function TestimonialsSection() {
                     onClick={() => handleDotClick(index)}
                     className={`h-2 rounded-full transition-all duration-300 ${
                       index === currentIndex
-                        ? "w-8 bg-red-600"
-                        : "w-2 bg-foreground/20"
+                        ? "w-8 bg-primary dark:bg-white"
+                        : "w-2 bg-foreground/20 dark:bg-foreground/10"
                     }`}
                     aria-label={`Go to testimonial ${index + 1}`}
                   />
@@ -147,17 +147,17 @@ export default function TestimonialsSection() {
                   variant="outline"
                   size="icon"
                   onClick={handlePrev}
-                  className="rounded-full"
+                  className="rounded-full hover:bg-primary dark:hover:bg-white bg-primary dark:bg-white"
                 >
-                  <ChevronLeft className="h-5 w-5" />
+                  <ChevronLeft className="h-5 w-5 text-white dark:text-primary" />
                 </Button>
                 <Button
                   variant="outline"
                   size="icon"
                   onClick={handleNext}
-                  className="rounded-full"
+                  className="rounded-full hover:bg-primary dark:hover:bg-white bg-primary dark:bg-white"
                 >
-                  <ChevronRight className="h-5 w-5" />
+                  <ChevronRight className="h-5 w-5 text-white dark:text-primary" />
                 </Button>
               </div>
             </div>

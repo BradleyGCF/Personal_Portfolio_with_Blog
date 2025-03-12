@@ -8,7 +8,6 @@ import {
   Palette,
   Zap,
   Database,
-  Globe,
   Download,
 } from "lucide-react";
 import React from "react";
@@ -20,34 +19,30 @@ export default function AboutSection() {
   const skills = [
     {
       name: "Frontend Development",
-      icon: <Code className="h-6 w-6" />,
-      description: "React, Next.js, Vue.js",
+      icon: <Code className="h-6 w-6 text-primary dark:text-white" />,
+      description: "React, Next.js",
     },
     {
       name: "Backend Development",
-      icon: <Server className="h-6 w-6" />,
-      description: "Node.js, Express, Django",
+      icon: <Server className="h-6 w-6 text-primary dark:text-white" />,
+      description: "Node.js, Express",
     },
     {
       name: "UI/UX Design",
-      icon: <Palette className="h-6 w-6" />,
+      icon: <Palette className="h-6 w-6 text-primary dark:text-white" />,
       description: "Figma, Adobe XD",
     },
     {
-      name: "Performance Optimization",
-      icon: <Zap className="h-6 w-6" />,
-      description: "Lighthouse, WebPageTest",
+      name: "Agile Methodologies",
+      icon: <Zap className="h-6 w-6 text-primary dark:text-white" />,
+      description: "Scrum, Kanban, Lean",
     },
     {
       name: "Database Management",
-      icon: <Database className="h-6 w-6" />,
-      description: "MongoDB, PostgreSQL, MySQL",
+      icon: <Database className="h-6 w-6 text-primary dark:text-white" />,
+      description: "MongoDB, PostgreSQL, ORM: Prisma",
     },
-    {
-      name: "Internationalization",
-      icon: <Globe className="h-6 w-6" />,
-      description: "i18n, l10n, RTL support",
-    },
+
   ];
 
   const containerVariants = {
@@ -79,8 +74,8 @@ export default function AboutSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
-          <div className="w-20 h-1 bg-red-600 mx-auto mb-8"></div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 dark:text-white">About Me</h2>
+          <div className="w-20 h-1 bg-primary dark:bg-white mx-auto mb-8"></div>
           <p className="max-w-3xl mx-auto text-lg text-foreground/70">
             I&apos;m a passionate Full Stack Developer with a keen eye for
             design and a commitment to creating seamless user experiences.
@@ -95,10 +90,10 @@ export default function AboutSection() {
             transition={{ duration: 0.6 }}
           >
             <div className="relative">
-              <div className="absolute -inset-4 rounded-xl bg-gradient-to-r from-red-600/20 to-black/20 blur-xl opacity-70 dark:opacity-30"></div>
+              <div className="absolute -inset-4 rounded-xl bg-gradient-to-r from-primary/20 to-black/20 blur-xl opacity-70 dark:opacity-30"></div>
               <div className="relative aspect-square overflow-hidden rounded-xl">
                 <Image
-                  src="/placeholder.svg?height=600&width=600"
+                  src="/brad.jpg?height=600&width=600"
                   alt="Bradley Caruci"
                   width={600}
                   height={600}
@@ -118,7 +113,7 @@ export default function AboutSection() {
             >
               <h3 className="text-2xl font-bold mb-4">My Journey</h3>
               <p className="text-foreground/70 mb-4">
-                With over 8 years of experience in web development, I&apos;ve
+                With over 3 years of experience in web development, I&apos;ve
                 worked on a diverse range of projects from small business
                 websites to large-scale enterprise applications. My approach
                 combines technical expertise with creative problem-solving to

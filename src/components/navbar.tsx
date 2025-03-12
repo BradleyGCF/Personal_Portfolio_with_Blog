@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { useTheme } from "next-themes"
 import { AnimatePresence, motion } from "framer-motion"
-import { Menu, X, Sun, Moon, Github, Linkedin, Instagram } from "lucide-react"
+import { Menu, X, Sun, Moon, Github, Linkedin, } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export default function Navbar() {
@@ -46,7 +46,7 @@ export default function Navbar() {
         <nav className="flex items-center justify-between">
           <Link href="/" className="text-2xl font-bold text-foreground">
             <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-              Bradley<span className="text-red-600">.</span>
+              Bradley
             </motion.div>
           </Link>
 
@@ -76,7 +76,7 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center space-x-4">
+          <div className="md:hidden flex hover:items-center space-x-4">
             {mounted && (
               <Button variant="outline" size="icon" onClick={toggleTheme} className="rounded-full">
                 {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
@@ -130,21 +130,17 @@ export default function Navbar() {
               </ul>
 
               <div className="flex space-x-4 mt-6 pt-6 border-t border-border">
-                <Link href="https://github.com" target="_blank" rel="noopener noreferrer">
+                <Link href="https://github.com/bradleycaruci" target="_blank" rel="noopener noreferrer">
                   <Button variant="ghost" size="icon" className="rounded-full">
                     <Github className="h-5 w-5" />
                   </Button>
                 </Link>
-                <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <Link href="https://linkedin.com/in/bradleycaruci" target="_blank" rel="noopener noreferrer">
                   <Button variant="ghost" size="icon" className="rounded-full">
                     <Linkedin className="h-5 w-5" />
                   </Button>
                 </Link>
-                <Link href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                  <Button variant="ghost" size="icon" className="rounded-full">
-                    <Instagram className="h-5 w-5" />
-                  </Button>
-                </Link>
+                
               </div>
             </div>
           </motion.div>

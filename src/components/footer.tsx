@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Github, Linkedin, Instagram, Mail } from "lucide-react"
+import { Github, Linkedin, Mail } from "lucide-react"
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -17,20 +17,17 @@ export default function Footer() {
               user experience and clean code.
             </p>
             <div className="flex space-x-4">
-              <Link href="#" className="text-foreground/70 hover:text-foreground transition-colors">
+              <Link href="https://github.com/BradleyGCF" target="_blank" rel="noopener noreferrer" className="text-foreground/70 hover:text-foreground transition-colors">
                 <Github className="h-5 w-5" />
                 <span className="sr-only">GitHub</span>
               </Link>
-              <Link href="#" className="text-foreground/70 hover:text-foreground transition-colors">
-                <Linkedin className="h-5 w-5" />
+              <Link href="https://www.linkedin.com/in/bradleycaruci/" target="_blank" rel="noopener noreferrer" className="text-foreground/70 hover:text-foreground transition-colors">
+                <Linkedin className="h-5 w-5" aria-hidden="true" />
                 <span className="sr-only">LinkedIn</span>
               </Link>
-              <Link href="#" className="text-foreground/70 hover:text-foreground transition-colors">
-                <Instagram className="h-5 w-5" />
-                <span className="sr-only">Instagram</span>
-              </Link>
+            
               <Link
-                href="mailto:bradley@example.com"
+                href="mailto:bradleycaruci@gmail.com"
                 className="text-foreground/70 hover:text-foreground transition-colors"
               >
                 <Mail className="h-5 w-5" />
@@ -42,11 +39,8 @@ export default function Footer() {
           <div>
             <h3 className="font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li>
-                <Link href="#home" className="text-foreground/70 hover:text-foreground transition-colors">
-                  Home
-                </Link>
-              </li>
+    
+          
               <li>
                 <Link href="#about" className="text-foreground/70 hover:text-foreground transition-colors">
                   About
@@ -58,13 +52,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="#services" className="text-foreground/70 hover:text-foreground transition-colors">
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link href="#blog" className="text-foreground/70 hover:text-foreground transition-colors">
-                  Blog
+                <Link href="#testimonials" className="text-foreground/70 hover:text-foreground transition-colors">
+                  Testimonials
                 </Link>
               </li>
               <li>
@@ -78,19 +67,16 @@ export default function Footer() {
           <div>
             <h3 className="font-bold mb-4">Contact</h3>
             <ul className="space-y-2">
-              <li className="text-foreground/70">San Francisco, CA</li>
+              
               <li>
                 <Link
-                  href="mailto:bradley@example.com"
+                  href="mailto:bradleycaruci@gmail.com"
                   className="text-foreground/70 hover:text-foreground transition-colors"
                 >
-                  bradley@example.com
+                  bradleycaruci@gmail.com
                 </Link>
               </li>
               <li>
-                <Link href="tel:+15551234567" className="text-foreground/70 hover:text-foreground transition-colors">
-                  +1 (555) 123-4567
-                </Link>
               </li>
             </ul>
           </div>
@@ -99,16 +85,11 @@ export default function Footer() {
         <div className="border-t border-border mt-12 pt-6 flex flex-col sm:flex-row justify-between items-center">
           <p className="text-sm text-foreground/60">&copy; {currentYear} Bradley Caruci. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 sm:mt-0">
-            <Link href="/privacy" className="text-sm text-foreground/60 hover:text-foreground transition-colors">
-              Privacy Policy
-            </Link>
-            <Link href="/terms" className="text-sm text-foreground/60 hover:text-foreground transition-colors">
-              Terms of Service
-            </Link>
+            
+            
           </div>
         </div>
       </div>
     </footer>
   )
 }
-

@@ -50,7 +50,7 @@ export default function Hero() {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <motion.span
-              className="inline-block text-primary font-medium mb-4"
+              className="inline-block text-primary font-medium mb-4 dark:text-white"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3, duration: 0.5 }}
@@ -72,21 +72,27 @@ export default function Hero() {
               transition={{ delay: 0.7, duration: 0.5 }}
             >
               <motion.div
-                animate={{ y: [0, -40, -80, -120, -160, 0] }}
-                transition={{
-                  duration: 10,
-                  ease: "easeInOut",
-                  repeat: Number.POSITIVE_INFINITY,
-                  repeatDelay: 1,
-                }}
-                className="text-2xl md:text-3xl font-semibold text-muted-foreground"
-              >
-                <div className="h-12 flex items-center">Web Developer</div>
-                <div className="h-12 flex items-center">UI/UX Designer</div>
-                <div className="h-12 flex items-center">Frontend Expert</div>
-                <div className="h-12 flex items-center">Problem Solver</div>
-                <div className="h-12 flex items-center">Creative Thinker</div>
-              </motion.div>
+  animate={{
+    y: [0, -40, -80, -120, -160, 0],
+    rotate: [0, 5, -5, 5, -5, 0],
+  }}
+  transition={{
+    duration: 10,
+    ease: "easeInOut",
+    repeat: Number.POSITIVE_INFINITY,
+    repeatDelay: 1,
+  }}
+  className="text-2xl md:text-3xl font-semibold text-muted-foreground"
+>
+  <div className="h-12 flex items-center">Web Developer</div>
+  <div className="h-12 flex items-center">Frontend Expert</div>
+  <div className="h-12 flex items-center">Backend Developer</div>
+  <div className="h-12 flex items-center">Problem Solver</div>
+  <div className="h-12 flex items-center">Creative Thinker</div>
+</motion.div>
+
+
+
             </motion.div>
             <motion.p
               className="text-lg text-muted-foreground mb-8 max-w-lg"
@@ -107,7 +113,7 @@ export default function Hero() {
             >
               <button
                 type="button"
-                className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-md font-medium transition-all duration-300 transform hover:scale-105"
+                className="bg-primary dark:bg-primary/90 hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-md font-medium transition-all duration-300 transform hover:scale-105"
                 onClick={() => {
                   document
                     .querySelector("#contact")
@@ -118,7 +124,7 @@ export default function Hero() {
               </button>
               <button
                 type="button"
-                className="bg-background border border-primary text-primary hover:bg-primary/10 px-6 py-3 rounded-md font-medium transition-all duration-300 transform hover:scale-105"
+                className="bg-background border border-primary text-primary hover:bg-primary/10 px-6 py-3 rounded-md font-medium transition-all duration-300 transform hover:scale-105 dark:bg-white dark:text-primary dark:hover:bg-primary/10"
                 onClick={() => {
                   document
                     .querySelector("#projects")
@@ -136,7 +142,7 @@ export default function Hero() {
               transition={{ delay: 1.3, duration: 0.5 }}
             >
               <a
-                href="https://github.com"
+                href="https://github.com/BradleyGCF"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Visit GitHub Profile"
@@ -145,7 +151,7 @@ export default function Hero() {
                 <Github size={24} />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/bradleycaruci/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Visit LinkedIn Profile"
@@ -154,7 +160,7 @@ export default function Hero() {
                 <Linkedin size={24} />
               </a>
               <a
-                href="https://twitter.com"
+                href="https://x.com/Bradley_Dev22"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Visit Twitter Profile"
@@ -169,7 +175,7 @@ export default function Hero() {
             <div className="relative w-full  h-[700px] ">
               <Spline scene="https://prod.spline.design/eJapy1X6FYeaT0y5/scene.splinecode" />
             </div>
-            <div className="absolute -bottom-5 -right-5 w-40 h-24 bg-[#F6F7F8] dark:bg-[#0F1829] rounded-lg mr-10 flex items-center justify-center text-primary-foreground font-bold text-xl">
+            <div className="absolute -bottom-5 -right-6 w-40 h-24 bg-[#F6F7F8] dark:bg-[#0F1829] rounded-lg mr-10 flex items-center justify-center text-primary-foreground font-bold text-xl">
               <span className="text-[transparent]">Let&apos;s Talk!</span>
             </div>
           </div>
@@ -182,7 +188,7 @@ export default function Hero() {
           transition={{ delay: 1.5, duration: 0.5 }}
         >
           <span className="text-muted-foreground mb-2">Scroll Down</span>
-          <ArrowDown className="text-primary animate-bounce" />
+          <ArrowDown className="text-primary dark:text-white animate-bounce" />
         </motion.div>
       </div>
     </section>

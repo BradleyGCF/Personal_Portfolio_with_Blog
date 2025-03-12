@@ -76,9 +76,9 @@ export default function Projects() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
         >
-          <span className="text-primary font-medium">My Work</span>
+          <span className="text-primary dark:text-white font-medium">My Work</span>
           <h2 className="text-3xl md:text-4xl font-bold mt-2">Featured Projects</h2>
-          <div className="w-20 h-1 bg-primary mx-auto mt-4 rounded-full"></div>
+          <div className="w-20 h-1 bg-primary dark:bg-white mx-auto mt-4 rounded-full"></div>
         </motion.div>
 
         <div className="relative">
@@ -225,7 +225,7 @@ export default function Projects() {
           animate={isInView ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: 0.5, delay: 0.8 }}
         >
-          <a href="#" className="text-primary hover:text-primary/80 font-medium inline-flex items-center gap-2">
+          <a href="#" className="text-primary dark:text-white hover:text-primary/80 dark:hover:text-white/80 font-medium inline-flex items-center gap-2">
             View All Projects
             <ChevronRight size={16} />
           </a>
